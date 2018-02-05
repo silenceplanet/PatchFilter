@@ -48,6 +48,8 @@ def __diff_files(filename, encoding="UTF-8"):
             if file_diff:
                 file_diff.append_line(line)
 
+        yield file_diff
+
 
 def do_filter(filename, new_filename, cut_patterns, besides_patterns, encoding):
 
