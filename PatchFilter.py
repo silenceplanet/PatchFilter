@@ -51,14 +51,14 @@ def __diff_files(filename, encoding="UTF-8"):
 
 def do_filter(filename, new_filename, cut_patterns, besides_patterns, encoding):
 
-    print("Original file: ", filename)
-    print("New file: ", new_filename)
+    print "Original file: ", filename
+    print "New file: ", new_filename
 
-    print("Cut file, using patterns: ", cut_patterns)
+    print "Cut file, using patterns: ", cut_patterns
 
-    print("Besides: ", besides_patterns)
+    print "Besides: ", besides_patterns
 
-    print("Using encoding: ", encoding)
+    print "Using encoding: ", encoding
 
     should_save = __get_validator(cut_patterns, besides_patterns)
 
@@ -70,9 +70,9 @@ def do_filter(filename, new_filename, cut_patterns, besides_patterns, encoding):
                 if should_save(diff_file.name):
                     diff_file.write_to_file(new_file)
 
-            print("Done")
+            print "Done"
 
     except (UnicodeDecodeError, IOError, ValueError) as e:
-        print(e)
+        print e
         if os.path.isfile(new_filename):
             os.remove(new_filename)
