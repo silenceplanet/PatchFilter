@@ -9,7 +9,7 @@ description = """
      Filtering the patch file using parameters.
 ---------------------------------------------------
 Example:
-   python3 run_filter.py diff.patch '*xml' '*exe' -b '* /scripts/*'
+   python2.7 run_filter.py diff.patch '*xml' '*exe' -b '* /scripts/*'
 """
 
 
