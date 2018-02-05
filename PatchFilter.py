@@ -72,7 +72,7 @@ def do_filter(filename, new_filename, cut_patterns, besides_patterns, encoding):
 
             print("Done")
 
-    except (UnicodeDecodeError, FileNotFoundError, ValueError) as e:
+    except (UnicodeDecodeError, IOError, ValueError) as e:
         print(e)
         if os.path.isfile(new_filename):
             os.remove(new_filename)
